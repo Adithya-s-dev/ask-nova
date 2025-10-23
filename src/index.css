@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.7vw;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #7775;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #777; 
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #5555;
+}  
+ 
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background-color: #5555;
+}
+
+
