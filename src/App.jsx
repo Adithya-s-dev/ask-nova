@@ -19,6 +19,23 @@ function App() {
       return false
     }
 
+    if (questions) {
+      if (localStorage.getItem('history')) {
+        let history = JSON.parse(localStorage.getItem('history'))
+        history = history.slice(0,19);
+        history = [questions, ...history]
+        history = history.map((item) => 
+          item.charAt(0).toUpperCase()+item.slice(1).trim()
+        );
+        history = [...new Set(history)];
+        localStorage.setItem('history', JSON.stringify(history))
+        setRecentHistory(history)
+      } else {
+        localStorage.setItem('history', JSON.stringify([questions]))
+        setRecentHistory([questions])
+      }
+    }
+
     const payLoadData = questions ? questions : selectedHistory
     const payload = {
       contents: [
@@ -45,18 +62,6 @@ function App() {
     const responseData = await response.json()
     const data = responseData.candidates[0].content.parts[0].text
     const resultData = data.split('* ').map((items) => items.trim())
-
-    if (questions) {
-      if (localStorage.getItem('history')) {
-        let history = JSON.parse(localStorage.getItem('history'))
-        history = [questions, ...history]
-        localStorage.setItem('history', JSON.stringify(history))
-        setRecentHistory(history)
-      } else {
-        localStorage.setItem('history', JSON.stringify([questions]))
-        setRecentHistory([questions])
-      }
-    }
 
     setResult([
       ...result,
