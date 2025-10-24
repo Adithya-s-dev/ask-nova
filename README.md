@@ -1,4 +1,4 @@
-# 🧠 Ask Nova – Your Personal AI Assistant
+# Ask Nova – Your Personal AI Assistant
 
 Ask Nova is an intelligent conversational AI tool — similar to **ChatGPT** or **Google Gemini** — designed to help you ask questions, generate ideas, write code, and get instant, human-like responses.  
 Built with **React**, **Vite**, and **TailwindCSS**, Ask Nova provides a clean, fast, and modern chat interface for seamless AI conversations.
@@ -10,7 +10,6 @@ Built with **React**, **Vite**, and **TailwindCSS**, Ask Nova provides a clean, 
 > Here’s what Ask Nova looks like in action:
 
 ![Ask Nova Preview](./public/ask-nova-preview.png)
-*(Place your actual screenshot inside the `public` folder as `ask-nova-preview.png`)*
 
 ---
 
@@ -18,7 +17,7 @@ Built with **React**, **Vite**, and **TailwindCSS**, Ask Nova provides a clean, 
 
 Ask Nova allows users to:
 - 💬 Ask any question and receive detailed AI-generated answers.
-- 🧠 Interact in a chat-like environment with **markdown** and **syntax-highlighted code** support.
+-    Interact in a chat-like environment with **markdown** and **syntax-highlighted code** support.
 - 🕓 Store and revisit **recent conversation history**.
 - 🌗 Toggle between **Dark/Light modes** with persistent settings.
 - 📜 Automatically scroll to the latest message for smooth chat flow.
